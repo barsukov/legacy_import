@@ -1,11 +1,10 @@
 #Model need to be import
 acceptance_models:
-#TestModel
-#TestModel::MyNestedModel
-
+Post
+Blog
 #Model which to be ignored for iport if you need test it
 ignored_models:
-#FailedModel
+FailedModel
 
 
 
