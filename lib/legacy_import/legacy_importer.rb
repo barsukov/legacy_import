@@ -3,9 +3,11 @@ module LegacyImporter
   attr_accessor :imported_models
 
   def self.set_config_imported_models(config_name)
-    @imported_models =  YAML.load_file(config_name)
+    @imported_models = YAML.load_file(config_name)
   end
-
+  def self.get_all_models
+     @imported_models
+  end
   def self.get_only_acceptance_model
     @imported_models["acceptance_models"].split
   end
