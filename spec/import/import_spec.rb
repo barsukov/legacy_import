@@ -19,6 +19,16 @@ describe "LegaceImporter" do
       end
     end
 
+    describe ".get_special_parameters" do
+      context "validation off parameter for model" do
+
+      end
+      context "nested model parameter" do
+
+      end
+      context ""
+    end
+
     describe ".create_models" do
 
     end

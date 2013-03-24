@@ -1,15 +1,30 @@
 module LegacyImporter
   require "legacy_import/legacy_models"
+  require 'yaml'
+  YAML::ENGINE.yamler = 'syck'
   attr_accessor :imported_models
 
-  def self.set_config_imported_models(config_name)
-    @imported_models = YAML.load_file(config_name)
-  end
-  def self.get_all_models
-     @imported_models
-  end
-  def self.get_only_acceptance_model
-    @imported_models["acceptance_models"].split
+  class << self
+    def set_config_imported_models(config_name)
+      @imported_models = YAML.load_file(config_name)
+    end
+
+    def get_all_models
+      @imported_models
+    end
+
+    def get_only_acceptance_model
+      @imported_models["acceptance_models"].split
+    end
+
+    def get_special_params
+
+    end
+
+
+    def has_special_params?
+
+    end
   end
 
 
@@ -31,8 +46,6 @@ module LegacyImporter
 
       klass.class_eval do
         @original_model_name =   original_model_constant
-        #Жестокий хак который надо убрать дабы не позориться... и запилить функциональность в конфиг будущего для
-        # установки имени таблицы
         self.table_name = model.tableize
       end
     end
