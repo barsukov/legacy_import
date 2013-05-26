@@ -1,6 +1,7 @@
 # LegacyImport
 
-TODO: Write a gem description
+This gem want to help you import oldest data from legacy system , with different database adapter for example mysql to postgresql.
+If you have a different schema you can rewrite import strategy for your model or use config options.
 
 ## Installation
 
