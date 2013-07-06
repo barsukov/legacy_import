@@ -21,7 +21,6 @@ module LegacyImporter
 
     end
 
-
     def has_special_params?
 
     end
