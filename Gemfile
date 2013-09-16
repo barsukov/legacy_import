@@ -6,7 +6,8 @@ group :development do
   gem "rspec", "~> 2.8.0"
   gem "rspec-rails"
   gem "factory_girl"
-  gem "bundler" 
+  gem "bundler"
+  gem "generator_spec"
   gem "jeweler", "~> 1.8.4"
   gem 'database_cleaner'
   gem 'sqlite3'
