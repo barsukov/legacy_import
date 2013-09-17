@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
 source "http://rubygems.org"
 
+group :test do
+  gem 'generator_spec'
+end
+
 group :development do
   gem 'rails', '~> 3.2'
   gem "rspec", "~> 2.8.0"
   gem "rspec-rails"
   gem "factory_girl"
   gem "bundler"
-  gem "generator_spec"
   gem "jeweler", "~> 1.8.4"
   gem 'database_cleaner'
   gem 'sqlite3'

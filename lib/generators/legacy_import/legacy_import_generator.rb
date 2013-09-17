@@ -1,4 +1,4 @@
-class LegacyImportGenerator < Rails::Generators::NamedBase
+class LegacyImport::LegacyImportGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates', __FILE__)
 
   desc "LegacyImport installation generator"

@@ -6,6 +6,8 @@ LegacyImport.config do |config|
 
 ################  Global configuration  ################
 
+#Set imported db adapter, by default its postgresql
+#config.imported_db_adapter = 'mysql2'
 # Exclude specific models (keep the others):
 # config.excluded_models = [<%= LegacyModel.all.map{|am| "'#{am.model}'" }.join(', ') %>]
 

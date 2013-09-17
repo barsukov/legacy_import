@@ -1,9 +1,8 @@
-require "rspec_helper"
-require "generator_spec"
+require 'spec_helper'
 
-describe ConfigOfLegacy do
-    destination File.expand_path("../../tmp", __FILE__)
-    arguments %w(something)
+describe 'LegacyImport::LegacyImportGenerator', type: :generator do
+    #destination File.expand_path("../../tmp", __FILE__)
+    #arguments %w(something)
 
     before(:all) do
       prepare_destination
