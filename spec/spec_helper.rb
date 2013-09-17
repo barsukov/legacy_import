@@ -4,7 +4,6 @@ require File.expand_path("../dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'factory_girl'
-#require File.expand_path('../../lib/generators/legacy_import/legacy_import_generator', __FILE__)
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
