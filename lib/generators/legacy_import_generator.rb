@@ -1,14 +1,15 @@
-class LegacyImportGenerator < Rails::Generators::NamedBase
+class LegacyImportGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
+  argument :config_name, :type => :string, :default => "legacy_import"
 
   desc "LegacyImport installation generator"
-  def install
+  def generate_legacy_import
     initializer = (File.open(Rails.root.join("config/initializers/legacy_import.rb")) rescue nil).try :read
 
     unless initializer
-      template "initializer.erb", "config/initializers/impor.yml"
+      template "initializer.erb", "config/initializers/legacy_import.rb"
     else
-      display "You already have a config file. You're updating, heh? I'm generating a new 'import_models.yml.example' that you can review."
+      display "You already have a config file. You're updating, heh? I'm generating a new 'import_models.rb.example' that you can review."
       template "initializer.erb", "config/initializers/legacy_import.rb.example"
     end
   end
