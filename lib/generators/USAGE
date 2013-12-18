@@ -2,7 +2,4 @@ Description:
     Explain the generator
 
 Example:
-    rails generate legacy_import Thing
-
-    This will create:
-        what/will/it/create
+    rails generate legacy_import

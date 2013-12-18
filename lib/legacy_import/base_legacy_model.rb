@@ -1,5 +1,5 @@
 LEGACY_CLASS_PATH = "LegacyModels::Legacy"
-#TODO Довести до ума импорт для того что бы его можно было вынести в отдельный гем
+
 class LegacyBase < ActiveRecord::Base
   establish_connection Rails.configuration.database_configuration["legacy_#{Rails.env}"]
   self.abstract_class = true

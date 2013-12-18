@@ -1,20 +1,14 @@
 module LegacyImporter
   require "legacy_import/legacy_models"
-  require 'yaml'
-  YAML::ENGINE.yamler = 'syck'
   attr_accessor :imported_models
 
   class << self
-    def set_config_imported_models(config_name)
-      @imported_models = YAML.load_file(config_name)
-    end
-
-    def get_all_models
-      @imported_models
-    end
-
     def get_only_acceptance_model
-      @imported_models["acceptance_models"].split
+      LegacyImport.config.acceptable_models
+    end
+
+    def get_only_ignored_model
+      LegacyImport.config.ignored_models
     end
 
     def get_special_params

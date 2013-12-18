@@ -5,8 +5,13 @@ Dummy::Application.configure do
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
   # and recreated between test runs. Don't rely on the data there!
-  config.cache_classes = true
-
+  config.cache_classes = false
+  # preloads Rails for running tests, you may have to set it to true.
+  config.eager_load = false
+  # Load initializers before models get cached
+  config.before_eager_load do
+    Dir[File.expand_path "../../initializers/*", __FILE__].each { |file| require file }
+  end
   # Configure static asset server for tests with Cache-Control for performance
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"

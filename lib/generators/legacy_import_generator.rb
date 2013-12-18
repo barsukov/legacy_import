@@ -9,8 +9,8 @@ class LegacyImportGenerator < Rails::Generators::Base
     unless initializer
       template "initializer.erb", "config/initializers/legacy_import.rb"
     else
-      display "You already have a config file. You're updating, heh? I'm generating a new 'import_models.rb.example' that you can review."
       template "initializer.erb", "config/initializers/legacy_import.rb.example"
+      #display "You already have a config file. You're updating, heh? I'm generating a new 'import_models.rb.example' that you can review."
     end
   end
 end
