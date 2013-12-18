@@ -15,4 +15,7 @@ group :development do
   gem 'database_cleaner'
   gem 'sqlite3'
 end
+group :test do
+  gem "wrong"
+end
 
