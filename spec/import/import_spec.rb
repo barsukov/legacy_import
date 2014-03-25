@@ -6,6 +6,7 @@ require 'spec_helper'
 describe LegacyImporter do
     describe "get_models" do
       context 'when we need a get acceptance models' do
+
         let(:acceptance_models) {LegacyImporter.get_only_acceptance_model }
         let(:ignored_models) {LegacyImporter.get_only_ignored_model }
 
