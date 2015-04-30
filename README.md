@@ -1,8 +1,8 @@
 # LegacyImport
-
+NOT DEVELOPED!
 This gem want to help you import oldest data from legacy system , with different database adapter for example mysql to postgresql.
 If you have a different schema you can rewrite import strategy for your model or use config options.
-
+I do not finish it and unfortenetly does not have any time to support or continue this project 
 ## Installation
 
 Add this line to your application's Gemfile:
